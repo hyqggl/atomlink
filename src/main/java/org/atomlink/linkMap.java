@@ -1,33 +1,28 @@
 package org.atomlink;
 
 
-import java.util.List;
-
-/**
- * Created by huyiqing on 2017/2/17.
- */
 public class linkMap {
-    class atom
+
+
+    class atom_container
     {
-        List<link> front;
-        List<link> behind;
 
     }
 
-    class container
+    class link_combo_containner
     {
         
     }
 
-    class link
+    public boolean setLink(atom a1, atom a2)
     {
-        atom from;
-        atom to;
-        short strength;
-        short strength_reverse;
+        link l1 = new link(a1, a2);
+        a1.next.add(l1);
+        a2.before.add(l1);
+        return true;
     }
 
-    private boolean hasLink(atom a, atom b)
+    private boolean hasDirectLink(atom a, atom b)
     {
 
     }
